@@ -6,10 +6,6 @@ metadata:
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
     tad.gitops.get/replicas: ".spec.replicas"
-    redhat.com/source/url: https://github.com/org4rong/py3src
-    redhat.com/source/revision: 84e15671f11241382468bf18f6a83f56b91cd2a0
-    webchang/source/url: '"https://github.com/org4rong/py3src"'
-    webchang/source/revision: '"fb96669da963ed43ef641da68cf571991f164bee"'
   name: py3svc
 spec:
   replicas: 1
