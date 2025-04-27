@@ -9,12 +9,12 @@ metadata:
     git_url: "https://github.com/org4rong/py3src"
     git_rev: "97fccc0dba6212754574b22eb5ed5f77af643cf8"
     source-url: "https://github.com/org4rong/py3src"
-    source-revision: "15318452797d39713cd3795ea0aa213c63c4a088"
+    source-revision: "c7c1a6c3cd532a79e319fc0c340e863a31f11836"
   name: py3svc
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - image: quay.io/org4rong/py3img:15318452797d39713cd3795ea0aa213c63c4a088@sha256:339d3d04a1a4edc0affc89363f153a00cf61e9995f61506a7b49c9316357f9ff
+        - image: quay.io/org4rong/py3img:c7c1a6c3cd532a79e319fc0c340e863a31f11836@sha256:8b5f667a123d0fdf7591aee58a2379e39041ddf62ff93352322c935f4a0eeb23
           name: container-image
