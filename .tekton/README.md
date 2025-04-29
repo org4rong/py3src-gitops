@@ -21,3 +21,6 @@ To override the git-clone task, you may simply copy the git reference into your 
 These pipelines are in template format. The references to this repository in the PaC template is `{{values.rawUrl}}` which is updated to point to this repo or the fork of this repo.
 
 The intent of the template is to be able to fork this repository and update its use in the Developer Hub templates directory. 
+
+## Concert
+This gitops repo exemplies how ConcertDef Deploy Inventory files can be automatically generated and uploaded to a Concert instance.
