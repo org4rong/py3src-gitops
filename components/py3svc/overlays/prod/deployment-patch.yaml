@@ -12,5 +12,5 @@ spec:
   template: 
     spec:
       containers:
-      - image: quay.io/org4rong/py3img:6aca316d349fecf62259f9366cc33d69deecd4f0@sha256:5e042bb378cd3bb8fb86fb999abfbceb99ad3fc92e9452da8890061ec0afdaf9
+      - image: quay.io/org4rong/py3img:f1c9b19f48e2baeb0569c1a885ee414fd397b41d@sha256:3c1fbab8a4fe195270c6bc71a92a0b8a1a35108933d9080b19dcc8e7771ed088
         name: container-image  
