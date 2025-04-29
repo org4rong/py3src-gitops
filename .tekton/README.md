@@ -23,4 +23,4 @@ These pipelines are in template format. The references to this repository in the
 The intent of the template is to be able to fork this repository and update its use in the Developer Hub templates directory. 
 
 ## Concert
-This gitops repo exemplies how ConcertDef Deploy Inventory files can be automatically generated and uploaded to a Concert instance.
+This gitops repo exemplies how ConcertDef Deploy Inventory files can be automatically generated and uploaded to a Concert instance via custom pipelines.
