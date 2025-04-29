@@ -28,7 +28,7 @@ spec:
     - name: concert-enabled
       value: "true"
   pipelineRef:
-    name: gitops-push-rhtap
+    name: gitops-push
   workspaces:
     - name: git-auth
       secret:
