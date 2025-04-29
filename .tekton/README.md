@@ -10,7 +10,7 @@ When the pipleines in this repo are updated, all future runs in existing pipelin
 
 A developer can override these tasks with a local copy and updated annotations. 
 
-Example 
+Example
 
 To override the git-clone task, you may simply copy the git reference into your .tekton directory and then reference it from the remote task annotation. 
 
