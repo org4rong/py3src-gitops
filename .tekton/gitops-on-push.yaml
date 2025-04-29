@@ -1,0 +1,46 @@
+apiVersion: tekton.dev/v1
+kind: PipelineRun
+metadata:
+  name: py3svc-gitops-on-push
+  annotations:
+    pipelinesascode.tekton.dev/on-event: "[push]"
+    pipelinesascode.tekton.dev/on-target-branch: "[main]"
+    pipelinesascode.tekton.dev/max-keep-runs: "2"
+    pipelinesascode.tekton.dev/pipeline: "https://raw.githubusercontent.com/redhat-appstudio/tssc-sample-pipelines/v1.4.x/pac/pipelines/concert-gitops-push-rhtap.yaml"
+    pipelinesascode.tekton.dev/task-0: "https://raw.githubusercontent.com/redhat-appstudio/tssc-sample-pipelines/v1.4.x/pac/tasks/git-clone.yaml"
+    pipelinesascode.tekton.dev/task-1: "https://raw.githubusercontent.com/webchang/tssc-sample-templates/refs/heads/main/concert-upload-cd.yaml"
+  labels:
+    argocd/app-name: py3svc
+    janus-idp.io/tekton: py3svc
+    backstage.io/kubernetes-id: py3svc
+    backstage.io/kubernetes-namespace: rhtap-app
+    app.kubernetes.io/part-of: py3svc
+spec:
+  params:
+    - name: git-url
+      value: '{{repo_url}}'
+    - name: revision
+      value: '{{revision}}'
+    - name: target-branch
+      value: '{{target_branch}}'
+    - name: event-type
+      value: '{{event_type}}'
+    - name: concert-enabled
+      value: "true"
+  pipelineRef:
+    name: gitops-push-rhtap
+  workspaces:
+    - name: git-auth
+      secret:
+        secretName: "{{ git_auth_secret }}"
+    - name: concert-api
+      secret:
+        secretName: concert-api
+    - name: workspace
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi

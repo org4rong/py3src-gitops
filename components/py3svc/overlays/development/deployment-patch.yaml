@@ -6,8 +6,6 @@ metadata:
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
     tad.gitops.get/replicas: ".spec.replicas"
-    git_url: "https://github.com/org4rong/py3src"
-    git_rev: "97fccc0dba6212754574b22eb5ed5f77af643cf8"
     source-url: "https://github.com/org4rong/py3src"
     source-revision: "f40a8163224ac27a002a922470593b81f6e10208"
   name: py3svc
