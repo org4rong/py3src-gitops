@@ -25,10 +25,18 @@ spec:
       value: '{{target_branch}}'
     - name: event-type
       value: '{{event_type}}'
-    - name: if-concert-enabled # optional, default is "false"
+    - name: if-concert-enabled
+      description: Optional Concert enablement setting for generating and uploading ConcertDef files.  Default is "false".
       value: "true"
-    - name: concert-component-version # optional, default is '1.0.0'
+    - name: concert-component-version
+      description: Optional Concert setting for the ConcertDef component version.  Default is "1.0.0".
       value: "1.0.0"
+    - name: concert-api-base
+      description: Optional Concert setting for the base DOMAIN of the API service.  When the value is not set or is an empty string, it will be "{serviceName.nameSpace.svc}" per the Kubernetes service name and namespace in use.
+      value: "apps.rhocp2.hcp.res.ibm.com"
+    - name: concert-api-exposure
+      description: Optional Concert setting for the API exposure.  Default is "private".
+      value: "public"
   pipelineRef:
     name: gitops-push
   workspaces:
