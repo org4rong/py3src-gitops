@@ -6,6 +6,9 @@ metadata:
     app.kubernetes.io/managed-by: kustomize
     app.kubernetes.io/name: py3svc 
   name: py3svc
+  annotations:
+    domain: "apps.rhocp2.hcp.res.ibm.com"
+    exposure: "private"
 spec:
   port:
     targetPort: 8081 

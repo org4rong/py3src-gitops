@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: py3svc
   namespace: rhtap
-  finalizers: ["resources-finalizer.argocd.argoproj.io"] 
+  finalizers: ["resources-finalizer.argocd.argoproj.io"]
 spec:
   project: default
   source:
