@@ -1,16 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
+    source-url: "https://github.com/org4rong/py3src"
+    source-revision: "35a7c845fcc67c9bda03b960148ccae588f4a088"
   name: py3svc
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/org4rong/py3img:f1c9b19f48e2baeb0569c1a885ee414fd397b41d@sha256:3c1fbab8a4fe195270c6bc71a92a0b8a1a35108933d9080b19dcc8e7771ed088
-        name: container-image  
+        - image: quay.io/org4rong/py3img:f1c9b19f48e2baeb0569c1a885ee414fd397b41d@sha256:3c1fbab8a4fe195270c6bc71a92a0b8a1a35108933d9080b19dcc8e7771ed088
+          name: container-image
