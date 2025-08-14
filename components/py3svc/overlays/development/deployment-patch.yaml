@@ -7,12 +7,12 @@ metadata:
     tad.gitops.set/replicas: ".spec.replicas"
     tad.gitops.get/replicas: ".spec.replicas"
     source-url: "https://github.com/org4rong/py3src"
-    source-revision: "3fafc877d7ce5c354f787d73fccd9156bc21240e"
+    source-revision: "393811a76d70662a0fa4bcc259222ec01a0c8a4b"
   name: py3svc
 spec:
   replicas: 1
   template:
     spec:
       containers:
-        - image: quay.io/org4rong/py3img:3fafc877d7ce5c354f787d73fccd9156bc21240e@sha256:1164e36b372ed5adc888bbdda50a291a4d3ef32736dc12fa6bdf036022f06da1
+        - image: quay.io/org4rong/py3img:393811a76d70662a0fa4bcc259222ec01a0c8a4b@sha256:3d550669bd22c1cb4628f7752437cdc0895bdf8b48926e8510cf7731971cef90
           name: container-image
