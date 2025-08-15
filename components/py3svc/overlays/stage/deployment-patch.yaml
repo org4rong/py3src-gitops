@@ -7,7 +7,7 @@ metadata:
     tad.gitops.set/replicas: ".spec.replicas"
     tad.gitops.get/replicas: ".spec.replicas"
     source-url: "https://github.com/org4rong/py3src"
-    source-revision: "cbd5e26142a19f76d64cf1aa4b0b9d2e2bb37394"
+    source-revision: "f5d6f10aa8af14bb6ef8df4ed03c3e8b67635225"
   name: py3svc
 spec:
   replicas: 1
